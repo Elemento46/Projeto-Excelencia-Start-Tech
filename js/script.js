@@ -1,3 +1,4 @@
+// ....................CODIGO DO VIDEO FEATURES ....................
 const featureItems = document.querySelectorAll('.feature-item');
 const videoWrappers = document.querySelectorAll('.video-wrapper');
 const badge = document.getElementById('video-badge');
@@ -55,3 +56,7 @@ featureItems.forEach(item => {
         badge.textContent = badgeTexts[videoId];
     });
 });
+
+// .................... FIM CODIGO DO VIDEO FEATURES ....................
+
+
