@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300,400,700&display=swap');
+
+:root {
+    --cor-principal: #011936;
+    --cor-secundaria: #A9DBB8;
+    --cor-terciaria: #E2E2E2;
+    --cor-card: #1c2b45;  
+    --cor-borda-card: #2f3e5b; 
+    --cor-texto-principal: white;
+    --cor-texto-secundario: rgb(200, 200, 200); 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: var(--cor-principal);
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    border-bottom: 1px solid #2f3e5b;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+}
+
+.navbar nav a {
+    color: rgb(228, 222, 222);
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: 400;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+    text-transform: uppercase;
+}
+
+.navbar nav a:hover {
+    color: white;
+}
+
+.navbar nav .active {
+    color: var(--cor-texto-principal);
+    border-bottom: 2px solid white; 
+    padding-bottom: 2px;
+}
+
+.user-icon i {
+    font-size: 1.8rem;
+    color: rgb(255, 255, 255);
+}
+
+.container {
+    padding: 40px 5%;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+}
+
+.contact-header {
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin: 0 auto 40px auto; /* Centraliza o cabeçalho */
+}
+
+.contact-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.highlight {
+    color: var(--cor-secundaria);
+}
+
+.contact-header p {
+    color: var(--cor-texto-secundario);
+    font-size: 1.1rem;
+}
+
+.contact-form-card {
+    background-color: var(--cor-card);
+    padding: 40px;
+    border-radius: 12px;
+    border: 1px solid var(--cor-borda-card);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    text-align: left;
+    
+    max-width: 900px; 
+    width: 95%;      
+    margin: 40px auto; 
+}
+
+.card-title-icon {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    border-bottom: 1px solid var(--cor-borda-card);
+    padding-bottom: 20px;
+}
+
+.icon-circle {
+    width: 60px;
+    height: 60px;
+    border: 2px solid white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.icon-circle i {
+    font-size: 2rem;
+    color: white;
+}
+
+.card-title-icon h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+/* --- Formulário e Campos --- */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: 400;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    background-color: #1c2b45;
+    color: white;
+    border: 1px solid #445570;
+    border-radius: 6px;
+    padding: 12px 15px;
+    font-size: 1rem;
+    width: 100%;
+    transition: border-color 0.3s;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: var(--cor-texto-secundario);
+    opacity: 0.7;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--cor-secundaria);
+    outline: none;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.submit-btn {
+    background-color: #011936;
+    color: rgb(248, 248, 248);
+    border: none;
+    padding: 15px 30px;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+    margin-top: 15px;
+}
+
+.submit-btn:hover {
+    background-color: #03152c; 
+}
+
+.submit-btn:active {
+    transform: scale(0.99);
+}
+
+/* Media Query para garantir que em mobile o card ocupe quase toda a tela */
+@media (max-width: 950px) {
+    .contact-form-card {
+        max-width: 95%; 
+    }
+}
