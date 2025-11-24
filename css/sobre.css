@@ -1,0 +1,114 @@
+@charset "UTF-8";
+/* =============== FONTS & RESET =============== */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Core colors */
+    --cor-principal: #011936;
+    --cor-secundaria: #7701B7;
+    --cor-terciaria: #E2E2E2;
+}
+
+/* =============== BASE =============== */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+
+    background-color: whitesmoke;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+}
+
+
+/* .............. navbar ...................  */
+.botoes-maiores {
+    font-size: 18px;
+
+}
+
+li,
+a,
+button {
+    font-family: 'Josefin sans', sans-serif;
+    font-size: 23px;
+    color: white;
+    text-decoration: none;
+    font-weight: 350;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--cor-principal);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    height: 80px;
+}
+
+.logo img {
+    height: 30px;
+    width: auto;
+}
+
+/* nav links */
+.nav-links li {
+    list-style: none;
+    display: inline-block;
+    padding: 0 14px;
+}
+
+.nav-links li a:hover {
+    color: var(--cor-secundaria);
+    transition: 0.3s;
+}
+
+/* CTA / Planos */
+#planoslink {
+    padding: 10px 20px;
+    font-weight: 400;
+    background-color: var(--cor-principal);
+    color: whitesmoke;
+    border: 1px solid whitesmoke;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#planoslink:hover {
+    background-color: var(--cor-secundaria);
+    border: 1px solid var(--cor-secundaria);
+    transition: 0.6s;
+}
+
+/* generic buttons */
+button {
+    padding: 10px 20px;
+    background-color: whitesmoke;
+    color: var(--cor-principal);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--cor-secundaria);
+    color: whitesmoke;
+    transition: 0.6s;
+}
+
+/* .............. fim navbar ...................  */
