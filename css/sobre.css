@@ -949,6 +949,181 @@ svg {
 
 
 
+/* Estilos para a lista de cards (Grid) */
+.card-list {
+    width: 900px;
+    margin: 2rem auto;
+    /* ESSENCIAL: Ativar o Grid */
+    display: grid;
+    /* ESSENCIAL: Definir 3 colunas de largura igual */
+    grid-template-columns: repeat(3, 1fr); 
+}
+
+.equipe {
+    text-align: center;
+    padding: 50px 150px 80px 150px;
+    font-size: 40px;
+    font-weight: 500;
+    color: var(--cor-principal);
+}
+
+
+/* Estilos para o card individual */
+.card {
+    flex: 1 1 300px;
+    margin: 0px 20px 20px 20px;
+    background: #fff;
+    border-radius: 25px;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    /* Espaço para o avatar ficar acima */
+    padding: 100px 0 0 0; 
+    box-shadow: 0 0 60px -15px rgba(0, 0, 0, 0.25);
+    transition: transform 300ms ease;
+}
+
+.colorband {
+    height: 2px;
+    background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+}
+
+#card-1 .colorband {
+    background-image: linear-gradient(to right, #7701B7 0%, #b14fe6 100%);
+}
+
+#card-2 .colorband {
+    background-image: linear-gradient(to right, #7701B7 0%, #b14fe6 100%);
+}
+
+#card-3 .colorband {
+    background-image: linear-gradient(to right, #7701B7 0%, #b14fe6 100%);
+}
+
+.card h2 {
+    margin: 0;
+    padding: 1rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+.card .title {
+    padding: 0 1rem 1rem;
+    font-size: 0.75em;
+    text-align: center;
+}
+
+.card .desc {
+    padding: 1rem 2rem;
+    font-size: 0.9em;
+}
+
+.card .actions {
+    transition: box-shadow 300ms ease;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: #fafafa;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+.card:hover {
+    transform: scale(1.03);
+}
+
+.actions button {
+    width: 100%;
+    float: left;
+    background: transparent;
+    border: none;
+    padding: 1rem;
+    font-size: 1em;
+    transition: background 300ms ease, transform 300ms ease;
+    outline: none;
+    font-family: 'Lato', sans-serif;
+    cursor: pointer;
+}
+
+.actions button img {
+    /* Dimensões da imagem SVG/ícone */
+    width: 50%;
+    /* CORREÇÃO: Impede que o ícone intercepte o hover */
+    pointer-events: none; 
+}
+
+
+.actions button:hover {
+    transform: scale(1);
+    color: #fff;
+    border: none;
+    z-index: 100;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.1);
+}
+
+/* CORREÇÃO: Aplicação do Filtro (filter) para mudar a cor do ícone no hover (preto -> branco) */
+#card-1 .actions button:hover img,
+#card-2 .actions button:hover img,
+#card-3 .actions button:hover img {
+    /* Filtro para converter o ícone preto em branco */
+    filter: brightness(0) invert(1);
+    transition: filter 300ms ease;
+}
+
+
+#card-1 .actions button:hover {
+    background-image: linear-gradient(to right, #011936 0%, #0f3665 100%);
+    
+}
+
+#card-2 .actions button:hover {
+    background-image: linear-gradient(to right, #011936 0%, #0f3665 100%);
+}
+
+#card-3 .actions button:hover {
+    background-image: linear-gradient(to right, #011936 0%, #0f3665 100%);
+}
+
+.actions button:active {
+    transform: scale(0.9);
+}
+
+.actions button > span {
+    display: block;
+}
+
+/* AVATAR COM AS MODIFICAÇÕES */
+.avatar {
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    width: 150px;
+    height: 150px; 
+    transform: translateX(-50%);
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.1);
+    transition: transform 200ms ease;
+    overflow: hidden; 
+}
+
+.avatar:hover {
+    transform: translateX(-50%) scale(1.1);
+}
+
+/* ESTILO PARA A IMAGEM DENTRO DO AVATAR */
+.avatar img {
+    width: 100%; 
+    height: 100%; 
+    /* Garante que a imagem preencha o círculo sem distorcer, cortando o excesso */
+    object-fit: cover; 
+    border-radius: 50%; 
+}
+
+.avatar svg {
+    width: 100%;
+}
 
 
 
