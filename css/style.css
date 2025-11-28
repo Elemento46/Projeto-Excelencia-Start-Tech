@@ -13,7 +13,7 @@
 :root {
     /* Core colors */
     --cor-principal: #011936;
-    --cor-secundaria: #7701B7;
+    --cor-secundaria: #1d5d50;
     --cor-terciaria: #E2E2E2;
 }
 
@@ -23,7 +23,7 @@ html {
 }
 
 body {
-
+    overflow-x: hidden;
     background-color: whitesmoke;
     color: white;
     font-family: 'Montserrat', sans-serif;

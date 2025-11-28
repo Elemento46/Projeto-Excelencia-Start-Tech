@@ -13,7 +13,7 @@
 :root {
     /* Core colors */
     --cor-principal: #011936;
-    --cor-secundaria: #7701B7;
+    --cor-secundaria: #1d5d50;
     --cor-terciaria: #E2E2E2;
 }
 
@@ -23,15 +23,13 @@ html {
 }
 
 body {
-
-    background-color: whitesmoke;
-    color: white;
+    overflow-x: hidden;
     font-family: 'Montserrat', sans-serif;
     margin: 0;
 }
 
 
-/* .............. navbar ...................  */
+/* .............. navbar ...................  */
 .botoes-maiores {
     font-size: 18px;
 
@@ -111,4 +109,1021 @@ button:hover {
     transition: 0.6s;
 }
 
-/* .............. fim navbar ...................  */
+/* .............. fim navbar ...................  */
+
+
+.apresentacao-inicial {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    padding: 200px 0px 100px 150px;
+    color: var(--cor-principal);
+}
+
+.pontilhado-horizontal {
+    width: 500px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.imagemtexto img {
+    display: block;
+    border-radius: 20px;
+    width: 450px;
+    position: relative;
+    z-index: 2;
+}
+
+.pontilhados {
+    width: 350px;
+    position: absolute;
+
+}
+
+.textos p {
+    font-size: 20px;
+    padding: 20px 40px 0px 0px;
+}
+
+.textos h1 {
+    padding-top: 10px;
+    font-weight: 500;
+}
+
+
+.apresentacao-inicial p {
+    max-width: 500px;
+}
+
+
+
+
+
+
+
+.frase {
+    text-align: center;
+    padding: 100px 150px 50px 150px;
+    color: var(--cor-principal);
+}
+
+.frase p {
+    padding-top: 20px;
+    font-size: 20px;
+}
+
+svg {
+    display: block;
+}
+
+#mvv {
+    padding: 30px 40px 40px 40px;
+    background-color: var(--cor-principal);
+}
+
+/* =============== MVV =============== */
+#mvv h1 {
+    color: whitesmoke;
+    text-align: center;
+    font-weight: 500;
+    font-size: 50px;
+    padding: 10px 20px 40px 20px;
+}
+
+.mvv-container {
+    background-color: var(--cor-principal);
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 48px;
+    margin: 0px auto;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.mvv {
+    flex: 1 1 0;
+    background: #fff;
+    border-radius: 16px;
+    padding: 32px 24px 24px 24px;
+    box-shadow: 0 2px 16px 0 rgba(76, 26, 153, 0.07);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-width: 220px;
+}
+
+.mvv .mvv-icon {
+    width: 40px;
+    font-size: 48px;
+    margin-bottom: 16px;
+    color: var(--cor-principal);
+    margin-right: 50px; /* Isso parece incorreto se o ícone está centralizado */
+}
+
+.img-mvv {
+    width: 100px;
+    object-fit: contain;
+    margin-bottom: 16px;
+}
+
+.mvv h3 {
+    font-size: 1.8rem; /* Reduzido de 2.8rem para um tamanho mais padrão */
+    color: #1a2c26;
+    margin-bottom: 18px;
+    font-weight: bold;
+}
+
+.mvv p {
+    font-size: 1.15rem;
+    color: #222;
+    margin-bottom: 0;
+    line-height: 1.6;
+}
+
+.mvv ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.mvv ul li {
+    font-size: 1.1rem;
+    color: #222;
+    margin-bottom: 4px;
+}
+
+.mvv-divider {
+    width: 3px;
+    background: #1D5D50;
+    background: linear-gradient(90deg, rgba(29, 93, 80, 1) 0%, rgb(42, 167, 142) 50%);
+    border-radius: 2px;
+    margin: 0 18px;
+    min-height: 320px;
+    align-self: stretch;
+}
+
+@media (max-width: 900px) {
+    .mvv-container {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 32px;
+    }
+
+    .mvv-divider {
+        display: none;
+    }
+}
+
+/* Valores (MVV) - bolinha preta e alinhamento à esquerda */
+.mvv-list {
+    list-style-type: disc !important;
+    padding-left: 60px !important;
+    margin: 0;
+    text-align: left;
+    display: block;
+}
+
+.mvv-list li {
+    color: #222;
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    display: list-item;
+}
+
+/* =============== fim MVV ===============  */
+
+/* =============== FONTS & RESET =============== */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Core colors */
+    --cor-principal: #011936;
+    --cor-secundaria: #1d5d50;
+    --cor-terciaria: #E2E2E2;
+}
+
+/* =============== BASE =============== */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+}
+
+
+/* .............. navbar ...................  */
+.botoes-maiores {
+    font-size: 18px;
+
+}
+
+li,
+a,
+button {
+    font-family: 'Josefin sans', sans-serif;
+    font-size: 23px;
+    color: white;
+    text-decoration: none;
+    font-weight: 350;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--cor-principal);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    height: 80px;
+}
+
+.logo img {
+    height: 30px;
+    width: auto;
+}
+
+/* nav links */
+.nav-links li {
+    list-style: none;
+    display: inline-block;
+    padding: 0 14px;
+}
+
+.nav-links li a:hover {
+    color: var(--cor-secundaria);
+    transition: 0.3s;
+}
+
+/* CTA / Planos */
+#planoslink {
+    padding: 10px 20px;
+    font-weight: 400;
+    background-color: var(--cor-principal);
+    color: whitesmoke;
+    border: 1px solid whitesmoke;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#planoslink:hover {
+    background-color: var(--cor-secundaria);
+    border: 1px solid var(--cor-secundaria);
+    transition: 0.6s;
+}
+
+/* generic buttons */
+button {
+    padding: 10px 20px;
+    background-color: whitesmoke;
+    color: var(--cor-principal);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--cor-secundaria);
+    color: whitesmoke;
+    transition: 0.6s;
+}
+
+/* .............. fim navbar ...................  */
+
+
+.apresentacao-inicial {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    padding: 200px 0px 100px 150px;
+    color: var(--cor-principal);
+}
+
+.pontilhado-horizontal {
+    width: 500px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.imagemtexto img {
+    display: block;
+    border-radius: 20px;
+    width: 450px;
+    position: relative;
+    z-index: 2;
+}
+
+.pontilhados {
+    width: 350px;
+    position: absolute;
+
+}
+
+.textos p {
+    font-size: 20px;
+    padding: 20px 40px 0px 0px;
+}
+
+.textos h1 {
+    padding-top: 10px;
+    font-weight: 500;
+}
+
+
+.apresentacao-inicial p {
+    max-width: 500px;
+}
+
+
+/* =============== RODAPÉ =============== */
+footer {
+    width: 100%;
+    background: linear-gradient(135deg, #0a1628 0%, #1a2744 100%);
+    padding: 60px 40px 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.logo {
+    font-size: 32px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: -1px;
+}
+
+.tagline {
+    font-size: 15px;
+    color: #a0aec0;
+    line-height: 1.6;
+    font-style: italic;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.footer-links h3 {
+    color: #fff;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.footer-links a {
+    color: #cbd5e0;
+    text-decoration: none;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    display: inline-block;
+    position: relative;
+    padding-left: 20px;
+}
+
+.footer-links a::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--cor-secundaria); /* Usando a cor secundária */
+    transform: translateX(10px);
+}
+
+.footer-links a:hover::before {
+    opacity: 1;
+    left: 0;
+}
+
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer-contact h3 {
+    color: #fff;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.contact-item {
+    color: #cbd5e0;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: color 0.3s ease;
+}
+
+.contact-item:hover {
+    color: var(--cor-secundaria); /* Usando a cor secundária */
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+
+.social-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 12px;
+    background-color: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.social-icon:hover {
+    background: linear-gradient(135deg, var(--cor-secundaria), #764ba2); /* Adaptado para cor secundária */
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(26, 26, 27, 0.3);
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 40px auto 0;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    color: #718096;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    footer {
+        padding: 40px 20px 20px;
+    }
+}
+
+/* =============== fim RODAPÉ =============== */
+
+
+
+.frase {
+    text-align: center;
+    padding: 100px 150px 50px 150px;
+    color: var(--cor-principal);
+}
+
+.frase p {
+    padding-top: 20px;
+    font-size: 20px;
+}
+
+svg {
+    display: block;
+}
+
+#mvv {
+    padding: 30px 40px 40px 40px;
+    background-color: var(--cor-principal);
+}
+
+/* =============== MVV =============== */
+#mvv h1 {
+    color: whitesmoke;
+    text-align: center;
+    font-weight: 500;
+    font-size: 50px;
+    padding: 10px 20px 40px 20px;
+}
+
+.mvv-container {
+    background-color: var(--cor-principal);
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 48px;
+    margin: 0px auto;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.mvv {
+    flex: 1 1 0;
+    background: #fff;
+    border-radius: 16px;
+    padding: 32px 24px 24px 24px;
+    box-shadow: 0 2px 16px 0 rgba(76, 26, 153, 0.07);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-width: 220px;
+}
+
+.mvv .mvv-icon {
+    width: 40px;
+    font-size: 48px;
+    margin-bottom: 16px;
+    color: var(--cor-principal);
+    margin-right: 50px; /* Isso parece incorreto se o ícone está centralizado */
+}
+
+.img-mvv {
+    width: 100px;
+    object-fit: contain;
+    margin-bottom: 16px;
+}
+
+.mvv h3 {
+    font-size: 1.8rem; /* Reduzido de 2.8rem para um tamanho mais padrão */
+    color: #1a2c26;
+    margin-bottom: 18px;
+    font-weight: bold;
+}
+
+.mvv p {
+    font-size: 1.15rem;
+    color: #222;
+    margin-bottom: 0;
+    line-height: 1.6;
+}
+
+.mvv ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.mvv ul li {
+    font-size: 1.1rem;
+    color: #222;
+    margin-bottom: 4px;
+}
+
+.mvv-divider {
+    width: 3px;
+    background: #1D5D50;
+    background: linear-gradient(90deg, rgba(29, 93, 80, 1) 0%, rgb(42, 167, 142) 50%);
+    border-radius: 2px;
+    margin: 0 18px;
+    min-height: 320px;
+    align-self: stretch;
+}
+
+@media (max-width: 900px) {
+    .mvv-container {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 32px;
+    }
+
+    .mvv-divider {
+        display: none;
+    }
+}
+
+/* Valores (MVV) - bolinha preta e alinhamento à esquerda */
+.mvv-list {
+    list-style-type: disc !important;
+    padding-left: 60px !important;
+    margin: 0;
+    text-align: left;
+    display: block;
+}
+
+.mvv-list li {
+    color: #222;
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    display: list-item;
+}
+
+/* =============== fim MVV ===============  */
+
+
+/* ======================================= */
+/* 🧩 ESTILOS GERAIS DO SWIPER (CARROSSEL) */
+/* ======================================= */
+
+/* 1. CONTAINER PRINCIPAL (o que o JS usa: .swiper) */
+.nossa-historia {
+    text-align: center;
+    padding: 0px 150px 50px 150px;
+    font-size: 50px;
+    font-weight: 500;
+    color: var(--cor-principal);
+}
+
+.container.swiper {
+    max-width: 1200px;
+    margin: 0 auto;
+    /* CORREÇÃO 1: Aumentar o padding lateral para dar espaço aos botões fora dos cards */
+    padding: 60px 80px; 
+    
+    /* CORREÇÃO 2: Permite que os botões posicionados absolutamente sejam visíveis */
+    overflow: visible; 
+    position: relative; 
+    z-index: 10; 
+}
+
+/* 2. LISTA DE SLIDES (SWIPER WRAPPER) */
+.card-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* 3. SLIDE INDIVIDUAL (.swiper-slide) */
+.card-list .card-item.swiper-slide {
+    list-style: none;
+    height: auto;
+}
+
+/* 4. CARD LINK E ESTRUTURA */
+.card-list .card-item .card-link {
+    display: flex; 
+    flex-direction: column; 
+    height: 100%;
+    justify-content: space-between;
+    user-select: none;
+    background: #fff;
+    padding: 18px;
+    border-radius: 12px;
+    text-decoration: none;
+    border: 2px solid transparent;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease;
+}
+
+.card-list .card-item .card-link:hover{
+    border-color: #5372f0;
+    transform: translateY(-5px);
+}
+
+/* 5. IMAGEM, BADGE, TÍTULO e BOTÃO */
+.card-list .card-link .card-image{
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.card-list .card-link .badge{
+    color: blue;
+    margin: 10px 0 14px;
+    padding: 6px 14px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    background: #dde4ff;
+    width: fit-content;
+    border-radius: 50px;
+    align-self: flex-start;
+}
+
+.card-list .card-link .card-title{
+    font-size: 1.15rem;
+    color: #000;
+    font-weight: 600;
+    flex-grow: 1;
+    margin-bottom: 15px;
+}
+
+.card-list .card-link .card-button{
+    height: 40px;
+    width: 40px;
+    color: #5372f0;
+    border-radius: 50%;
+    margin-top: 10px;
+    background: none;
+    cursor: pointer;
+    transform: rotate(-45deg);
+    border: 2px solid #5372f0;
+    transition: 0.4s ease;
+    align-self: flex-start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+}
+
+.card-list .card-link:hover .card-button{
+    color: #fff;
+    background: #5372f0;
+}
+
+/* 6. PAGINAÇÃO (BOLINHAS) */
+.container.swiper .swiper-pagination-bullet{
+    height: 10px;
+    width: 10px;
+    opacity: 0.7;
+    background: #5372f0;
+}
+
+.container.swiper .swiper-pagination-bullet-active{
+    opacity: 1;
+}
+
+/* 7. BOTÕES DE NAVEGAÇÃO (SETAS LATERAIS) */
+.container.swiper .swiper-slide-button{
+    color: var(--cor-principal);
+    background: #fff; /* Adicionei background branco para melhor visualização */
+    border-radius: 10%; 
+    width: 45px;
+    height: 45px;
+    top: 50%;
+    margin-top: -22px; 
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+    
+    /* CORREÇÃO CRUCIAL: 'absolute' para rolar com o conteúdo pai */
+    position: absolute; 
+    
+    z-index: 100; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.container.swiper .swiper-button-prev {
+    /* Posiciona 10px do lado esquerdo da área de padding */
+    left: 10px;
+}
+.container.swiper .swiper-button-next {
+    /* Posiciona 10px do lado direito da área de padding */
+    right: 10px;
+}
+
+
+/* 8. RESPONSIVIDADE */
+@media screen and (max-width: 1024px) {
+    .container.swiper {
+        /* Garante espaço nas telas menores */
+        padding: 40px 50px; 
+    }
+}
+
+@media screen and (max-width: 768px){
+    .container.swiper{
+        /* Remove o padding extra em telas muito pequenas, pois os botões serão ocultados */
+        padding: 20px 0;
+    }
+
+    .container.swiper .swiper-slide-button{
+        display: none; /* Oculta os botões em dispositivos móveis */
+    }
+
+    .card-list .card-link .card-title{
+        font-size: 1rem;
+    }
+}
+
+
+
+
+
+
+
+/* =============== RODAPÉ =============== */
+footer {
+    width: 100%;
+    background: linear-gradient(135deg, #0a1628 0%, #1a2744 100%);
+    padding: 60px 40px 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.logo {
+    font-size: 32px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: -1px;
+}
+
+.tagline {
+    font-size: 15px;
+    color: #a0aec0;
+    line-height: 1.6;
+    font-style: italic;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.footer-links h3 {
+    color: #fff;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.footer-links a {
+    color: #cbd5e0;
+    text-decoration: none;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    display: inline-block;
+    position: relative;
+    padding-left: 20px;
+}
+
+.footer-links a::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #7701B7;
+    transform: translateX(10px);
+}
+
+.footer-links a:hover::before {
+    opacity: 1;
+    left: 0;
+}
+
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer-contact h3 {
+    color: #fff;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.contact-item {
+    color: #cbd5e0;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: color 0.3s ease;
+}
+
+.contact-item:hover {
+    color: #7701B7;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+
+.social-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 12px;
+    background-color: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.social-icon:hover {
+    background: linear-gradient(135deg, #7701B7, #764ba2);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(26, 26, 27, 0.3);
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 40px auto 0;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    color: #718096;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    footer {
+        padding: 40px 20px 20px;
+    }
+}
+
+/* =============== fim RODAPÉ =============== */
