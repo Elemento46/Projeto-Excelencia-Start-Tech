@@ -913,7 +913,7 @@ footer::before {
 }
 
 .footer-links a:hover {
-    color: #7701B7;
+    color: var(--cor-secundaria);
     transform: translateX(10px);
 }
 
@@ -953,7 +953,7 @@ footer::before {
 }
 
 .contact-item:hover {
-    color: #7701B7;
+    color: var(--cor-secundaria);
 }
 
 .social-icons {
@@ -980,7 +980,7 @@ footer::before {
 }
 
 .social-icon:hover {
-    background: linear-gradient(135deg, #7701B7, #764ba2);
+    background: var(--cor-secundaria);
     transform: translateY(-5px);
     box-shadow: 0 10px 25px rgba(26, 26, 27, 0.3);
 }
