@@ -1,0 +1,476 @@
+:root {
+    --main-bg-color: #0b1a2c; 
+    --accent-color: #00c7a7; 
+    --text-color: #f0f8ff; 
+    --header-bg-color: #081524;
+    --accordion-bg: #13273e; 
+    --danger-color: #ff4d4f; 
+    --radio-checked-border: #8000ff; }
+
+/* Estilos Globais */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif; 
+}
+
+body {
+    background-color: var(--main-bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+
+header {
+    background-color: var(--header-bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    border-bottom: 1px solid #1f3956;
+}
+
+.logo1 img { 
+    width: 200px;
+    height: auto;
+    display: block; 
+    object-fit: contain; 
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+nav ul li:hover {
+    opacity: 1;
+}
+
+.profile-icon {
+    font-size: 30px;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+/* Estilo do Container Principal */
+.settings-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.settings-container h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.settings-container .subtitle {
+    font-size: 16px;
+    font-weight: 300;
+    color: #a0aec0;
+    margin-bottom: 30px;
+}
+
+/* Estilos do Acordeão (Detalhes e Resumo) */
+.accordion-item {
+    background-color: var(--accordion-bg);
+    border-radius: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #1f3956;
+    overflow: hidden;
+}
+
+.accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: var(--accordion-bg);
+    color: var(--accent-color); /* Títulos das seções em ciano */
+}
+
+.icon-text {
+    display: flex;
+    align-items: center;
+}
+
+.icon-text .icon-left {
+    margin-right: 10px;
+    color: var(--accent-color);
+    font-size: 20px;
+}
+
+.arrow-icon {
+    color: var(--accent-color);
+    transition: transform 0.3s ease;
+}
+
+/* Rotação da seta quando o acordeão está aberto */
+.accordion-item[open] > .accordion-header .arrow-icon {
+    transform: rotate(180deg);
+}
+
+.accordion-content {
+    padding: 10px 20px 20px;
+    border-top: 1px solid #1f3956;
+}
+
+/* Estilos de Lista (Conta e Histórico) */
+.accordion-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.accordion-content li {
+    padding: 10px 0;
+    border-bottom: 1px solid #1f3956;
+    font-size: 15px;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.accordion-content li:last-child {
+    border-bottom: none;
+}
+
+.accordion-content li i.fas {
+    margin-right: 10px;
+    color: var(--accent-color);
+}
+
+.danger-action {
+    color: var(--danger-color);
+    font-weight: bold;
+}
+
+/* Estilos de Personalização (config2.PNG) */
+.accordion-content .description {
+    color: #a0aec0;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.option-group h3, .option-group h4 {
+    color: var(--accent-color);
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.radio-option, .checkbox-option {
+    display: flex;
+    align-items: center;
+    padding: 8px 0;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+/* Estilo do Radio Button Customizado (Reproduzindo o estilo da imagem) */
+input[type="radio"] {
+    appearance: none;
+    background-color: #fff;
+    margin-right: 10px;
+    font: inherit;
+    color: currentColor;
+    width: 15px;
+    height: 15px;
+    border: 2px solid var(--text-color);
+    border-radius: 50%;
+    transform: translateY(-0.075em);
+    display: grid;
+    place-content: center;
+    cursor: pointer;
+}
+
+input[type="radio"]::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: transform 0.2s ease-in-out;
+    background-color: var(--radio-checked-border); /* Ponto interno roxo */
+}
+
+input[type="radio"]:checked {
+    border-color: var(--radio-checked-border); /* Borda roxa quando checado */
+}
+
+input[type="radio"]:checked::before {
+    transform: scale(1);
+}
+
+/* Estilo do Checkbox (config4.PNG) */
+input[type="checkbox"] {
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border: 2px solid var(--text-color);
+    margin-right: 10px;
+    border-radius: 3px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+input[type="checkbox"]:checked::before {
+    content: '\2713'; /* Checkmark */
+    display: block;
+    color: var(--main-bg-color); /* A cor do fundo para o checkmark ficar visível */
+    font-size: 12px;
+    line-height: 1;
+    text-align: center;
+    position: relative;
+    top: -1px;
+}
+
+.privacy-settings {
+    margin-top: 15px;
+    padding-left: 10px; /* Recuo para as opções de privacidade */
+}
+
+.privacy-settings h4 {
+    margin-top: 0;
+    font-weight: normal;
+}
+
+.privacy-option input[type="checkbox"] {
+    margin: 0 5px;
+}
+
+.privacy-lock {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #a0aec0;
+}
+
+.privacy-lock i {
+    margin-right: 8px;
+    color: #a0aec0;
+}
+
+.footer-note {
+    font-size: 13px;
+    color: #a0aec0;
+    margin-top: 20px;
+    border-top: 1px solid #1f3956;
+    padding-top: 10px;
+}
+
+/* Media Query para Responsividade */
+@media (max-width: 600px) {
+    .settings-container {
+        margin: 20px auto;
+    }
+
+    .settings-container h1 {
+        font-size: 28px;
+    }
+
+    header {
+        padding: 10px 3%;
+    }
+
+    nav ul {
+        display: none; /* Esconde o menu de navegação em telas pequenas para simplicidade */
+    }
+
+    .accordion-header {
+        font-size: 16px;
+        padding: 12px 15px;
+    }
+}
+
+
+/* =============== RODAPÉ =============== */
+footer {
+    width: 100%;
+    background: linear-gradient(135deg, #0a1628 0%, #1a2744 100%);
+    padding: 60px 40px 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.logo {
+    font-size: 32px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: -1px;
+}
+
+.tagline {
+    font-size: 15px;
+    color: #a0aec0;
+    line-height: 1.6;
+    font-style: italic;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.footer-links h3 {
+    color: #fff;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.footer-links a {
+    color: #cbd5e0;
+    text-decoration: none;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    display: inline-block;
+    position: relative;
+    padding-left: 20px;
+}
+
+.footer-links a::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--cor-secundaria);
+    transform: translateX(10px);
+}
+
+.footer-links a:hover::before {
+    opacity: 1;
+    left: 0;
+}
+
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer-contact h3 {
+    color: #fff;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.contact-item {
+    color: #cbd5e0;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: color 0.3s ease;
+}
+
+.contact-item:hover {
+    color: var(--cor-secundaria);
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+
+.social-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 12px;
+    background-color: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.social-icon:hover {
+    background: var(--cor-secundaria);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(26, 26, 27, 0.3);
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 40px auto 0;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    color: #718096;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    footer {
+        padding: 40px 20px 20px;
+    }
+}

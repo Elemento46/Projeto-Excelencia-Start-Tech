@@ -2,12 +2,12 @@
 
 :root {
     --cor-principal: #011936;
-    --cor-secundaria: #A9DBB8;
+    --cor-secundaria: #1d5d50;
     --cor-terciaria: #E2E2E2;
-    --cor-card: #1c2b45;  
-    --cor-borda-card: #2f3e5b; 
+    --cor-card: #1c2b45;
+    --cor-borda-card: #2f3e5b;
     --cor-texto-principal: white;
-    --cor-texto-secundario: rgb(200, 200, 200); 
+    --cor-texto-secundario: rgb(200, 200, 200);
 }
 
 * {
@@ -18,46 +18,93 @@
 }
 
 body {
-    background-color: var(--cor-principal);
+    overflow-x: hidden;
+    background-color: whitesmoke;
     color: white;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
 }
 
-.navbar {
+
+/* =============== NAVBAR =============== */
+.botoes-maiores {
+    font-size: 18px;
+
+}
+
+li,
+a,
+button {
+    font-family: 'Josefin sans', sans-serif;
+    font-size: 23px;
+    color: white;
+    text-decoration: none;
+}
+
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 5%;
-    border-bottom: 1px solid #2f3e5b;
+    padding: 20px;
+    background-color: var(--cor-principal);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    height: 80px;
 }
 
-.logo {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: white;
+.logo img {
+    height: 30px;
+    width: auto;
 }
 
-.navbar nav a {
-    color: rgb(228, 222, 222);
-    text-decoration: none;
-    margin-left: 25px;
+/* nav links */
+.nav-links li {
+    list-style: none;
+    display: inline-block;
+    padding: 0 14px;
+}
+
+.nav-links li a:hover {
+    color: var(--cor-secundaria);
+    transition: 0.3s;
+}
+
+/* CTA / Planos */
+#planoslink {
+    padding: 10px 20px;
     font-weight: 400;
-    font-size: 0.9rem;
-    transition: color 0.3s;
-    text-transform: uppercase;
+    background-color: var(--cor-principal);
+    color: whitesmoke;
+    border: 1px solid whitesmoke;
+    border-radius: 10px;
+    cursor: pointer;
 }
 
-.navbar nav a:hover {
-    color: white;
+#planoslink:hover {
+    background-color: var(--cor-secundaria);
+    border: 1px solid var(--cor-secundaria);
+    transition: 0.6s;
 }
 
-.navbar nav .active {
-    color: var(--cor-texto-principal);
-    border-bottom: 2px solid white; 
-    padding-bottom: 2px;
+/* generic buttons */
+button {
+    padding: 10px 20px;
+    background-color: whitesmoke;
+    color: var(--cor-principal);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
 }
+
+button:hover {
+    background-color: var(--cor-secundaria);
+    color: whitesmoke;
+    transition: 0.6s;
+}
+
 
 .user-icon i {
     font-size: 1.8rem;
@@ -74,7 +121,8 @@ body {
 .contact-header {
     margin-bottom: 40px;
     max-width: 800px;
-    margin: 0 auto 40px auto; /* Centraliza o cabeçalho */
+    margin: 0 auto 40px auto;
+    /* Centraliza o cabeçalho */
 }
 
 .contact-header h1 {
@@ -93,16 +141,16 @@ body {
 }
 
 .contact-form-card {
-    background-color: var(--cor-card);
+    background-color: var(--cor-principal);
     padding: 40px;
     border-radius: 12px;
     border: 1px solid var(--cor-borda-card);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     text-align: left;
-    
-    max-width: 900px; 
-    width: 95%;      
-    margin: 40px auto; 
+
+    max-width: 900px;
+    width: 95%;
+    margin: 40px auto;
 }
 
 .card-title-icon {
@@ -182,7 +230,7 @@ body {
 }
 
 .submit-btn {
-    background-color: #011936;
+    background-color: var(--cor-secundaria);
     color: rgb(248, 248, 248);
     border: none;
     padding: 15px 30px;
@@ -195,7 +243,9 @@ body {
 }
 
 .submit-btn:hover {
-    background-color: #03152c; 
+    background: #1D5D50;
+    background: linear-gradient(90deg, rgba(29, 93, 80, 1) 0%, rgba(74, 148, 134, 1) 50%);
+    transition: 0.6s;
 }
 
 .submit-btn:active {
@@ -205,6 +255,316 @@ body {
 /* Media Query para garantir que em mobile o card ocupe quase toda a tela */
 @media (max-width: 950px) {
     .contact-form-card {
-        max-width: 95%; 
+        max-width: 95%;
     }
 }
+
+
+
+/* --------------------------- */
+
+
+.container-contato {
+    max-width: 900px;
+    margin: 40px auto;
+    /* Centraliza na página, ajuste conforme sua necessidade */
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Estilo do bloco principal com o degradê e borda arredondada */
+.bloco-contato {
+    /* Degradê de fundo com 180 graus (vertical) */
+    background: var(--cor-principal);
+
+    /* Borda e sombra arredondadas */
+    border-radius: 20px;
+    padding: 30px;
+    color: white;
+    /* Cor do texto dentro do bloco */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo do texto introdutório */
+.intro-texto {
+    font-size: 18px;
+    font-weight: 580;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    color: whitesmoke;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    /* Linha divisória sutil */
+}
+
+/* Estilo da lista de contatos */
+.lista-contatos {
+    list-style: none;
+    /* Remove os marcadores de lista padrão */
+    padding: 0;
+    margin: 0;
+}
+
+/* Estilo de cada item de contato */
+.item-contato {
+    display: flex;
+    /* Alinha o ícone e o texto lado a lado */
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+/* Estilo da caixa do ícone (círculo escuro) */
+.icone-box {
+    width: 50px;
+    height: 50px;
+    background-color: #172635;
+    /* Cor de fundo escura */
+    border-radius: 50%;
+    /* Torna-o um círculo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    font-size: 20px;
+}
+
+/* Ajusta o ícone para ser branco */
+.icone-box i {
+    color: white;
+}
+
+/* Estilo das informações de contato */
+.info-contato {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Título (E-mail, Chat Online, etc.) */
+.titulo-contato {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.2;
+    color: #011936;
+}
+
+/* Detalhe (o texto menor) */
+.detalhe-contato {
+    font-size: 17px;
+    font-weight: 548;
+    line-height: 1.2;
+    color: whitesmoke;
+}
+
+/* Estilos do rodapé */
+.rodape-contato {
+    text-align: center;
+    padding-top: 20px;
+    background-color: var(--cor-secundaria);
+    /* Fundo escuro */
+    color: white;
+
+    margin-top: -20px;
+    /* Sobrepõe um pouco a borda inferior do bloco principal */
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 20px 0 10px;
+    /* Espaçamento */
+}
+
+.logo-rodape {
+    /* Se você tiver uma imagem de logo real, use: */
+    width: 120px;
+    height: auto;
+    /* Se não tiver a imagem, pode estilizar como um texto */
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.slogan {
+    font-size: 12px;
+    margin: 5px 0 0;
+    color: #a4c9a5;
+}
+
+/* Se for necessário, estilize o item de horário com uma cor diferente no ícone */
+.item-contato.horario .icone-box {
+    /* Pode ser a cor do meio do degradê se for desejado um destaque */
+    background-color: #314b5f;
+}
+
+
+/* =============== RODAPÉ =============== */
+footer {
+    width: 100%;
+    background: linear-gradient(135deg, #0a1628 0%, #1a2744 100%);
+    padding: 60px 40px 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.logo {
+    font-size: 32px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: -1px;
+}
+
+.tagline {
+    font-size: 15px;
+    color: #a0aec0;
+    line-height: 1.6;
+    font-style: italic;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.footer-links h3 {
+    color: #fff;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.footer-links a {
+    color: #cbd5e0;
+    text-decoration: none;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    display: inline-block;
+    position: relative;
+    padding-left: 20px;
+}
+
+.footer-links a::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--cor-secundaria);
+    transform: translateX(10px);
+}
+
+.footer-links a:hover::before {
+    opacity: 1;
+    left: 0;
+}
+
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer-contact h3 {
+    color: #fff;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.contact-item {
+    color: #cbd5e0;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: color 0.3s ease;
+}
+
+.contact-item:hover {
+    color: var(--cor-secundaria);
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+
+.social-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 12px;
+    background-color: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.social-icon:hover {
+    background: var(--cor-secundaria);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(26, 26, 27, 0.3);
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 40px auto 0;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    color: #718096;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    footer {
+        padding: 40px 20px 20px;
+    }
+}
+
+/* =============== fim RODAPÉ =============== */
